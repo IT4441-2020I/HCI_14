@@ -1,0 +1,279 @@
+<!doctype html>
+<!-- 
+* Bootstrap Simple Admin Template
+* Version: 1.2
+* Author: Alexis Luna
+* Copyright 2020 Alexis Luna
+* Website: https://github.com/alexis-luna/bootstrap-simple-admin-template
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blank Page | Start Bootstrap</title>
+
+    <link href="assets/vendor/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link href="assets/css/overlay_screen.css" rel="stylesheet" />
+    <script src="assets/vendor/jquery3/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/common.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" style="background-color: #ffffff !important;">
+
+        </nav>
+
+        <div id="body" class="active">
+            <nav id="header" class="navbar navbar-expand-lg navbar-white bg-white"
+                style="background-color: #ffffff !important;">
+            </nav>
+            <!-- hiện div sương mờ ở đây !-->
+            <div id="overlay2" onclick="closeNav();"></div>
+            <!-- form thêm sửa ở đây !    -->
+
+            <div id="myForm" class="overlay rounded" style="border-radius: 10px;">
+                <div class="overlay-content ">
+                    <form>
+                        <!-- Vertical -->
+                        <div class="form-group">
+                            <!--Mã Role -->
+                            <!-- <label for="user_id" class="control-label">Mã NV</label> -->
+                            <input type="hidden" class="form-control" id="role_id" placeholder="John Deer" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <h4 class="control-label text-center font-weight-bold">Luyện gõ từ : NHƠ</h4>
+                        </div>
+                        <div class="form-group">
+                            <div class="card"
+                                style="border-radius: 10px; border-color: #d8dadf; box-shadow: 0 0 10px 3px #d8dadf">
+                                <div class="content">
+
+                                    <div class="row" style="display: flex;">
+                                        <div class="col-md-12">
+                                            <p style="color: black; margin-bottom: 3px;">
+                                                Mức độ ghi nhớ
+                                            </p>
+                                            <div class=" progress mb-1 mt-3"
+                                                style="border-radius: 10px !important; border-color: #d8dadf;">
+                                                <div class="progress-bar progress-bar-striped bg-primary"
+                                                    role="progressbar" style="width: 85%;" aria-valuenow="10"
+                                                    aria-valuemin="0" aria-valuemax="100">
+                                                    85%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row " style="display: flex;">
+                                        <div class="col-md-12">
+                                            <p style="color: black; margin-bottom: 3px;">
+                                                Số lần luyện tập
+                                            </p>
+                                            <div class=" progress mb-1 mt-3"
+                                                style="border-radius: 10px !important; border-color: #d8dadf;">
+                                                <div class="progress-bar progress-bar-striped bg-danger"
+                                                    role="progressbar" style="width: 55%;" aria-valuenow="10"
+                                                    aria-valuemin="0" aria-valuemax="100">
+                                                    85</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row " style="display: flex;">
+                                        <div class="col-md-12">
+                                            <p style="color: black; margin-bottom: 3px;">
+                                                Tốc độ gõ (từ/phút)
+                                            </p>
+                                            <div class=" progress mb-1 mt-3"
+                                                style="border-radius: 10px !important; border-color: #d8dadf;">
+                                                <div class="progress-bar progress-bar-striped bg-success"
+                                                    role="progressbar" style="width: 65%;" aria-valuenow="10"
+                                                    aria-valuemin="0" aria-valuemax="100">
+                                                    137 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-2" style="display: flex;">
+                                        <div class="col-md-12">
+                                            <p style="color: black; margin-bottom: 3px;">
+                                                Độ chính xác
+                                            </p>
+                                            <div class=" progress mb-1 mt-3"
+                                                style="border-radius: 10px !important; border-color: #d8dadf;">
+                                                <div class="progress-bar progress-bar-striped bg-warning"
+                                                    role="progressbar" style="width: 85%;" aria-valuenow="10"
+                                                    aria-valuemin="0" aria-valuemax="100">
+                                                    85%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="clearfix">
+                        <button class="ml-2 btn btn-danger mt-5 float-right" style="margin-top:30px!important;"
+                            onclick="closeNav();">
+                            Đóng
+                        </button>
+                        <button id="addRow" class="btn btn-primary mt-5 float-right" style="margin-top:30px!important;"
+                            onclick="closeNav();">
+                            OK
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- hết form -->
+            <div class="content">
+                <div class="container-fluid"
+                    style="background-color: #ffffff !important;  border-radius: 10px; border-color: #d8dadf; box-shadow: 0 0 10px 3px #d8dadf">
+                    <div class="page-title">
+                        <div class="page-title">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h5
+                                        style="padding: 20px; color: #1877f2; font-weight: bolder;     font-size: 1.75rem;">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        Luyện gõ từ
+                                    </h5>
+                                    <hr style="margin-top: -25px;">
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-2" style="margin-top:15% ;">
+
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h4>Hãy gõ từ:</h4>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h4 id="rhythm" class="text-danger" style="font-weight:bold">NHƠ</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input id="myInput" class="form-control text-center" style="height:55px;"
+                                                required autofocus oninput="myFunction();">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div>
+                                                <button onclick="next();openNav();" class="btn btn-primary"
+                                                    style="border-radius: 10px; border-color: #f2f2f2; color: #1877f2; background-color: #f2f2f2;font-weight: bold;"
+                                                    onmouseover="this.style.backgroundColor='#1877f2'; this.style.color='white'"
+                                                    onmouseout="this.style.backgroundColor='#f2f2f2'; this.style.color='#1877f2'">
+                                                    <p>Từ Khác</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5 id="demo" class="m-3 text-center"></h5>
+                                        </div>
+                                        <div class="col-md-3">
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <img id="img" src="assets/img/NHƠ.png" alt="bootraper logo" class="app-logo"
+                                            style="width:100%;">
+                                        <img id="img-hand" src="assets/img/nhơ-hand.jpg" alt="bootraper logo"
+                                            class="app-logo" style="width:50%;display: block;
+                                            margin-left: auto;
+                                            margin-right: auto;">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top:15% ;">
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="assets/vendor/jquery3/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/solid.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/fontawesome.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/form-detail.js"></script>
+    <script>
+        var count = 0;
+        function myFunction() {
+            var x = document.getElementById("myInput").value;
+            if (count == 0) {
+                if (x == "awi" || x == "aiw" || x == "wai" || x == "wia" || x == "iwa" || x == "iaw") {
+                    document.getElementById("demo").innerHTML = "Bạn đã nhập đúng !";
+                    document.getElementById("demo").classList = "m-3 text-center text-success";
+                    document.getElementById("myInput").value = x;
+                }
+                else {
+                    document.getElementById("demo").innerHTML = "Bạn nhập sai !";
+                    document.getElementById("demo").classList = "m-3 text-center text-danger";
+                    document.getElementById("myInput").value = x;
+                }
+            } else if (count == 1) {
+                if (x == "nkp" || x == "npk" || x == "knp" || x == "kpn" || x == "pnk" || x == "pkn") {
+
+                    document.getElementById("demo").innerHTML = "Bạn đã nhập đúng !";
+                    document.getElementById("demo").classList = "m-3 text-center text-success";
+                    document.getElementById("myInput").value = x;
+                }
+                else {
+                    document.getElementById("demo").innerHTML = "Bạn nhập sai !";
+                    document.getElementById("demo").classList = "m-3 text-center text-danger";
+                    document.getElementById("myInput").value = x;
+                }
+            }
+        }
+        function next() {
+            if (count == 0) {
+                document.getElementById("demo").innerHTML = "";
+                count++;
+                document.getElementById("myInput").value = "";
+                document.getElementById("myInput").focus();
+                document.getElementById("rhythm").innerHTML = "UYÊN";
+                document.getElementById("img").src = "assets/img/UYÊN.PNG"
+                document.getElementById("img-hand").src = "assets/img/uyên-hand.PNG"
+            } else if (count == 1) {
+                document.getElementById("demo").innerHTML = "";
+                count--;
+                document.getElementById("myInput").value = "";
+                document.getElementById("myInput").focus();
+                document.getElementById("rhythm").innerHTML = "NHƠ";
+                document.getElementById("img").src = "assets/img/NHƠ.png"
+                document.getElementById("img-hand").src = "assets/img/nhơ-hand.jpg"
+            }
+
+        }
+    </script>
+</body>
+
+</html>
